@@ -17,8 +17,12 @@ import java.util.UUID;
 public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
+    @Column(name = "product")
     private String product;
+    @Column(name = "quantity")
     private Integer quantity;
+    @Column(name = "price")
     private Double price;
 }
